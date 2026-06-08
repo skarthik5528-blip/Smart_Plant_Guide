@@ -13,7 +13,7 @@ db = SQLAlchemy(app)
 import os
 
 client = Groq(
-    api_key=os.getenv("GROQ_API_KEY", "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")
+    api_key=os.getenv("GROQ_API_KEY", "gsk_pl0itdSJUAA100ME6uy1WGdyb3FYSMtUviuWIChgs3yfJnHLzNA")
 )
 
 # --- DATABASE MODEL ---
