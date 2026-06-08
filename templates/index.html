@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Smart Plant Guide | Cultivate Intelligence</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <div class="background-elements">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="logo">
+                <i class="fa-solid fa-seedling logo-icon"></i>
+                <h1>Smart Plant Guide</h1>
+            </div>
+            <div class="header-controls">
+                <div class="language-selector">
+                    <i class="fa-solid fa-globe"></i>
+                    <select id="languageSelect">
+                        <option value="English">English</option>
+                        <option value="Kannada">ಕನ್ನಡ (Kannada)</option>
+                        <option value="Hindi">हिंदी (Hindi)</option>
+                        <option value="Tamil">தமிழ் (Tamil)</option>
+                        <option value="Telugu">తెలుగు (Telugu)</option>
+                    </select>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            
+            <!-- Left Column: Search & Upload -->
+            <div class="control-panel">
+                <div class="card upload-card">
+                    <h2><i class="fa-solid fa-camera"></i> Image Identify</h2>
+                    <p class="subtitle">Upload a photo to detect diseases or identify a plant.</p>
+                    <div class="upload-zone" id="uploadZone">
+                        <i class="fa-solid fa-cloud-arrow-up upload-icon"></i>
+                        <p>Drag & drop or click to upload</p>
+                        <input type="file" id="imageInput" accept="image/*" hidden>
+                    </div>
+                    <button id="analyzeBtn" class="btn secondary-btn" disabled>Analyze Image</button>
+                    <div id="imagePreview" class="image-preview"></div>
+                </div>
+            </div>
+
+            <!-- Right Column: Interactive Chat & Results -->
+            <div class="results-panel">
+                <div class="card chat-card">
+                    <div class="chat-header">
+                        <h2><i class="fa-solid fa-robot"></i> AI Agronomist</h2>
+                        <span class="status-indicator"></span>
+                    </div>
+                    
+                    <div class="chat-window" id="chatWindow">
+                        <div class="message ai-message">
+                            <div class="avatar"><i class="fa-solid fa-leaf"></i></div>
+                            <div class="bubble">
+                                Hello! I'm your AI Plant Expert. Ask me anything about crop health, diseases, or plant care.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chat-input-area">
+                        <textarea id="chatInput" placeholder="How to cure leaf spot in tomato?" rows="1"></textarea>
+                        <button id="micBtn" class="btn mic-btn" title="Speak"><i class="fa-solid fa-microphone"></i></button>
+                        <button id="sendBtn" class="btn send-btn" title="Send"><i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="/static/script.js"></script>
+</body>
+</html>
